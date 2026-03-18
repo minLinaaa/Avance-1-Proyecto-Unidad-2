@@ -1,0 +1,28 @@
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             version="3.0">
+
+    <persistence-unit name="PU" transaction-type="RESOURCE_LOCAL">
+        
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <class>com.itson.modelo.Estudiante</class>
+        <class>com.itson.modelo.Hobby</class>
+        <class>com.itson.modelo.Like</class>
+        <class>com.itson.modelo.Match</class>
+        <class>com.itson.modelo.Mensaje</class>
+
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/itson_match"/>
+            <property name="jakarta.persistence.jdbc.user" value="root"/>
+            <property name="jakarta.persistence.jdbc.password" value="Juanita123!"/>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+        </properties>
+
+    </persistence-unit>
+</persistence>
+
